@@ -57,12 +57,12 @@ print(f"Predicted value:{pre}")
 ```
 
 ## Output:
-![1](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/9132f5ae-6162-4fcc-bf4d-4190e65bd50f){: style="height:83px"}
-![2](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/361485a2-f387-4af8-98fb-bf69267184c0){: style="height:83px"}
-![3](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/ded2bc5b-0354-42dc-9f7e-bde93a2e0184){: style="height:83px"}
-![4](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/c54715b7-9dbb-480b-92b8-f39fd9b2826c){: style="height:83px"}
-![5](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/5678f9c0-a86f-440d-a321-fbecd8d7ade7){: style="height:83px"}
-![6](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/029fa182-16b1-411c-8058-6c41af070789){: style="height:83px"}
+![1](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/d0013d15-255a-4ce8-b8d9-824e1d5e8204)
+![2](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/3ed4aeaf-7e6a-40b0-9ddf-579d2aab59dc)
+![3](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/31391540-c63d-4e98-a42f-1a8e9ce2ac35)
+![4](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/85e735b4-bc14-4bfa-834a-14a0b1483b20)
+![5](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/56261815-8c71-47ce-a835-c25cccea5fe7)
+![6](https://github.com/rohithprem18/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/146315115/8177ec32-5b3d-4258-bdb6-e538c0d823d0)
 
 
 ## Result:
