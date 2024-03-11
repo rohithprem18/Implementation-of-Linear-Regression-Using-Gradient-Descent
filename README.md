@@ -24,99 +24,40 @@ RegisterNumber:  212222100059
 */
 ```
 ```
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-data=pd.read_csv("ex1.txt",header=None)
-plt.scatter(data[0],data[1])
-plt.xticks(np.arange(5,30,step=5))
-plt.yticks(np.arange(-5,30,step=5))
-plt.xlabel("Population of City(10,000s)")
-plt.ylabel("Profit ($10,000)")
-plt.title("Profit Prediction")
-
-def computeCost(X,y,theta):
-    m=len(y) 
-    h=X.dot(theta) 
-    square_err=(h-y)**2
-    return 1/(2*m)*np.sum(square_err) 
-
-data_n=data.values
-m=data_n[:,0].size
-X=np.append(np.ones((m,1)),data_n[:,0].reshape(m,1),axis=1)
-y=data_n[:,1].reshape(m,1)
-theta=np.zeros((2,1))
-computeCost(X,y,theta) 
-
-def gradientDescent(X,y,theta,alpha,num_iters):
-    m=len(y)
-    J_history=[] #empty list
-    for i in range(num_iters):
-        predictions=X.dot(theta)
-        error=np.dot(X.transpose(),(predictions-y))
-        descent=alpha*(1/m)*error
-        theta-=descent
-        J_history.append(computeCost(X,y,theta))
-    return theta,J_history
-
-theta,J_history = gradientDescent(X,y,theta,0.01,1500)
-print("h(x) ="+str(round(theta[0,0],2))+" + "+str(round(theta[1,0],2))+"x1")
-
-plt.plot(J_history)
-plt.xlabel("Iteration")
-plt.ylabel("$J(\Theta)$")
-plt.title("Cost function using Gradient Descent")
-
-plt.scatter(data[0],data[1])
-x_value=[x for x in range(25)]
-y_value=[y*theta[1]+theta[0] for y in x_value]
-plt.plot(x_value,y_value,color="r")
-plt.xticks(np.arange(5,30,step=5))
-plt.yticks(np.arange(-5,30,step=5))
-plt.xlabel("Population of City(10,000s)")
-plt.ylabel("Profit ($10,000)")
-plt.title("Profit Prediction")
-
-def predict(x,theta):
-    predictions=np.dot(theta.transpose(),x)
-    return predictions[0]
-
-predict1=predict(np.array([1,3.5]),theta)*10000
-print("For Population = 35000, we predict a profit of $"+str(round(predict1,0)))
-
-predict2=predict(np.array([1,7]),theta)*10000
-print("For Population = 70000, we predict a profit of $"+str(round(predict2,0)))
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+def linear_regression(X1,y,learning_rate=0.1,num_iters=1000):
+    X = np.c_[np.ones(len(X1)),X1]
+    theta = np.zeros(X.shape[1]).reshape(-1,1)
+    for _ in range(num_iters):
+        predictions = (X).dot(theta).reshape(-1,1)
+        errors=(predictions-y).reshape(-1,1)
+        theta-=learning_rate*(1/len(X1))*X.T.dot(errors)
+    return theta
+data=pd.read_csv("C:/Users/admin/Downloads/rohithprem/50_Startups.csv")
+data.head()
+X = (data.iloc[1:,:-2].values)
+X1 =X.astype(float)
+scaler = StandardScaler()
+y = (data.iloc[1:,-1].values).reshape(-1,1)
+X1_Scaled = scaler.fit_transform(X1)
+Y1_Scaled = scaler.fit_transform(y)
+print(X)
+print(X1_Scaled)
+theta=linear_regression(X1_Scaled,Y1_Scaled)
+new_data=np.array([165349.2,136897.8,471784.1]).reshape(-1,1)
+new_Scaled=scaler.fit_transform(new_data)
+prediction=np.dot(np.append(1,new_Scaled),theta)
+prediction= prediction.reshape(-1,1)
+pre = scaler.inverse_transform(prediction)
+print(prediction)
+print(f"Predicted value:{pre}")
 ```
 
 ## Output:
 
-### Profit Prediction
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/6463e6a3-f7af-4cdf-90af-ee102e4525ce)
-
-### Function:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2be9c588-ff00-4697-ad3a-adeb64fd6be5)
-
-### GRADIENT DESCENT:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/16a91a1d-efcb-47ae-9134-d28379911594)
-
-### COST FUNCTION USING GRADIENT DESCENT:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/908519ea-4d3b-479e-ad54-660fe686ce67)
-
-### LINEAR REGRESSION USING PROFIT PREDICTION:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/7ca2eff3-071e-4292-93ed-28cf00cf8c3c)
-
-### PROFIT PREDICTION FOR A POPULATION OF 35000:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2c563003-0ab0-4bf9-ad02-63f1a465bee7)
-
-### PROFIT PREDICTION FOR A POPULATION OF 70000:
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/ded61a8c-7b40-4f95-8c71-1fcd1a5b0b37)
+![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/3582c606-e8b4-4bdd-b33d-3d1f22660ff6)
 
 
 ## Result:
