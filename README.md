@@ -57,13 +57,12 @@ print(f"Predicted value:{pre}")
 
 ## Output:
 
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/48a477c7-c5a9-4ff3-946a-1cb08a30ed3f)
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2183a3df-f122-46d4-bd31-45085e3b560a)
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/f528b30f-2408-4b8f-ab53-568a64f54e7a)
-
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/b8b34d95-274e-4703-8fc1-13e3afd98971)
-![image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2f22e471-c3bc-4139-8feb-dd3a89aa26a6)
+!1[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/48a477c7-c5a9-4ff3-946a-1cb08a30ed3f)
+!2[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2183a3df-f122-46d4-bd31-45085e3b560a)
+!3[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/f528b30f-2408-4b8f-ab53-568a64f54e7a)
+!4[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/b8b34d95-274e-4703-8fc1-13e3afd98971)
+!5[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/2f22e471-c3bc-4139-8feb-dd3a89aa26a6)
+!6[image](https://github.com/VARSHINI22009118/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119401150/f654cb18-ef63-470c-8177-a58d06ed87ad)
 
 
 
